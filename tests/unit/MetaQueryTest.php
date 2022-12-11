@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Devly\WP\Query\Tests;
+namespace Devly\WP\Query\Tests\Unit;
 
 use Devly\WP\Query\Builder;
 use Devly\WP\Query\Concerns\HasMetaQuery;
