@@ -5,7 +5,7 @@
 		 backupGlobals="false"
 		 colors="true"
 		 verbose="true"
-		 bootstrap="vendor/autoload.php"
+		 bootstrap="tests/bootstrap.php"
 		 failOnRisky="true"
 		 failOnWarning="true"
 		 convertErrorsToExceptions="true"
@@ -18,6 +18,10 @@
 	<testsuites>
 		<testsuite name="Devly WP Query tests">
 			<directory>./tests/unit</directory>
+		</testsuite>
+
+		<testsuite name="Devly WP Query integration tests">
+			<directory>./tests/integration</directory>
 		</testsuite>
 	</testsuites>
 
