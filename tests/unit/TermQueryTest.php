@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Devly\WP\Query\Tests;
 
-use Devly\WP\Database\Exceptions\InvalidArgument;
 use Devly\WP\Query\TermQuery;
-use PHPUnit\Framework\TestSuite;
+use InvalidArgumentException;
+use PHPUnit\Framework\TestCase;
 
-class TermQueryTest extends TestSuite
+class TermQueryTest extends TestCase
 {
     public function testBuildQuery(): void
     {
@@ -84,7 +84,7 @@ class TermQueryTest extends TestSuite
 
     public function testThrowsInvalidValue(): void
     {
-        $this->expectException(InvalidArgument::class);
+        $this->expectException(InvalidArgumentException::class);
 
         TermQuery::create()->whereTaxonomy(['tax_name', 1])->getQueryArgs(); // @phpstan-ignore-line
     }
