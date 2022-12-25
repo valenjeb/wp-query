@@ -18,6 +18,8 @@ abstract class Builder
     /** @var array<string, mixed> */
     protected array $query = [];
 
+    protected ?string $returnType = null;
+
     /**
      * @param array<string, mixed>|self $query
      *
@@ -65,8 +67,8 @@ abstract class Builder
     public function set($key, $value = null): self
     {
         if (is_array($key)) {
-            foreach ($key as $value) {
-                $this->set($value, $value);
+            foreach ($key as $k => $value) {
+                $this->set($k, $value);
             }
 
             return $this;
