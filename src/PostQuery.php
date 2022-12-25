@@ -1489,6 +1489,7 @@ class PostQuery extends Builder
     {
         $posts = get_posts($this->getQueryArgs());
         $posts = collect($posts);
+        $returnType ??= $this->returnType;
 
         if (empty($returnType)) {
             return $posts;

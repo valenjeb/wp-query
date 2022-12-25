@@ -103,4 +103,9 @@ abstract class Builder
 
         return $this;
     }
+
+    public function setReturnType(?string $returnType): void
+    {
+        $this->returnType = $returnType;
+    }
 }

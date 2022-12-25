@@ -470,6 +470,7 @@ class UserQuery extends Builder
         $users = get_users($this->getQueryArgs());
 
         $users = collect($users);
+        $returnObject ??= $this->returnType;
 
         if (empty($returnObject)) {
             return $users;

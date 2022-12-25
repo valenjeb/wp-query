@@ -470,6 +470,8 @@ class TermQuery extends Builder
 
         $collection = Collection::make($terms);
 
+        $returnObject ??= $this->returnType;
+
         if (empty($model)) {
             return $collection;
         }
